@@ -15,12 +15,12 @@ from flask_login import LoginManager
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Table, Column, Integer, ForeignKey
-import os
+
 
 Base = declarative_base()
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.environ['SECRETCODE']
+app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
 login_manager = LoginManager()
 login_manager.init_app(app)
 ckeditor = CKEditor(app)
